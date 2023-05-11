@@ -1,0 +1,201 @@
+svg path {
+  transition: all 0.2s ease;
+}
+
+a {
+  transition: all 0.2s ease;
+}
+
+body {
+  background-color: #190319;
+}
+
+.container, .container__1400, .container__full {
+  padding: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.container__full {
+  max-width: 100%;
+  width: 100%;
+}
+.container__1400 {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #e91d63;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 150px !important;
+  text-align: center;
+  font-family: "Pixel Operator", monospace;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: normal;
+  font-size: 18px;
+  display: block;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  color: #e91d63;
+  transition: all 0.2s ease;
+}
+
+.header {
+  justify-content: space-between;
+}
+.header__brand a svg path {
+  fill: #fff;
+}
+.header__brand a:hover svg path {
+  fill: #e91d63;
+}
+.header__nav-list {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  padding: 0;
+}
+.header__nav-item {
+  padding-right: 40px;
+  font-family: "Pixel Operator", monospace;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.header__nav-item:last-child {
+  padding-right: 0;
+}
+.header__nav-item .accent {
+  color: #e91d63;
+}
+.header__nav-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+.header__nav-item a:hover {
+  color: #e91d63;
+}
+
+main #top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+main #top h1, main #top h2 {
+  width: 100%;
+  text-align: center;
+}
+main #top h1 {
+  font-size: 72px;
+  color: #fff;
+  position: relative;
+}
+main #top h1::before, main #top h1::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100px;
+  background: #e91d63;
+  display: block;
+}
+main #top h1::before {
+  left: 0;
+}
+main #top h1::after {
+  right: 0;
+}
+main #top h2 {
+  color: #e91d63;
+  font-size: 36px;
+  font-family: "Pixel Operator", monospace;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: normal;
+}
+main .projects {
+  gap: 50px;
+  margin-bottom: 100px;
+}
+main .projects__item {
+  width: calc(33% - 30px);
+}
+main .projects__item img {
+  border-radius: 20px;
+  border: 2px solid #e91d63;
+  height: 260px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+main .projects__item a {
+  font-family: "Pixel Operator", monospace;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+main .projects__item a svg path {
+  fill: #fff;
+}
+main .projects__item a:hover {
+  color: #e91d63;
+}
+main .projects__item a:hover svg path {
+  fill: #e91d63;
+}
+main #contact {
+  justify-content: center;
+}
+main #contact .btn {
+  margin-right: 50px;
+}
+main #contact .btn:last-of-type {
+  margin-right: 0;
+}
+main #contact .social-icons {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 0;
+}
+main #contact .social-icons a svg {
+  width: 30px;
+}
+main #contact .social-icons a svg path {
+  fill: #fff;
+}
+main #contact .social-icons a:hover svg path {
+  fill: #e91d63;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 30px;
+}
+footer p {
+  font-family: "Pixel Operator", monospace;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: normal;
+}

@@ -1,0 +1,1 @@
+document.getElementsByClassName("footer-year")[0].innerHTML = new Date().getFullYear();

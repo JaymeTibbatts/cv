@@ -1,0 +1,271 @@
+//Variables
+$primary: #e91d63;
+$primary-light: #fad1df;
+$background: #190319;
+$foreground: #000000;
+
+$bp-480: 480px;
+$bp-768: 768px;
+$bp-1024: 1024px;
+$bp-1400: 1400px;
+$bp-1600: 1600px;
+
+//Mixins
+
+@mixin pixel {
+  font-family: 'Pixel Operator', monospace;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+@mixin transition {
+  transition: all 0.2s ease;
+}
+
+svg {
+  path {
+    @include transition();
+  }
+}
+
+a {
+  @include transition();
+}
+
+body {
+  background-color: $background;
+}
+
+.container {
+  padding: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  &__full {
+    @extend .container;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__1400 {
+    @extend .container;
+    max-width: $bp-1400;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid $primary;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 150px !important;
+  text-align: center;
+  @include pixel();
+  font-size: 18px;
+  display: block;
+  @include transition();
+
+  &:hover {
+    color: $primary;
+    @include transition();
+  }
+}
+
+.header {
+  justify-content: space-between;
+
+  &__brand {
+    a {
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav-list {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__nav-item {
+    padding-right: 40px;
+    @include pixel();
+    text-transform: uppercase;
+  
+    &:last-child {
+      padding-right: 0;
+    }
+
+    .accent {
+      color: $primary;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+main {
+  #top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    h1, h2 {
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 72px;
+      color: #fff;
+      position: relative;
+
+      &::before, &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        width: 100px;
+        background: $primary;
+        display: block;
+      }
+
+      &::before {
+        left: 0;
+      } 
+      
+      &::after {
+        right: 0;
+      }
+    }
+
+    h2 {
+      color: $primary;
+      font-size: 36px;
+      @include pixel();
+    }
+  }
+
+  .projects {
+    gap: 50px;
+    margin-bottom: 100px;
+
+    &__item {
+      width: calc(33% - 30px);
+
+      img {
+        border-radius: 20px;
+        border: 2px solid $primary;
+        height: 260px;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      a {
+        @include pixel();
+        color: #fff;
+        font-weight: normal;
+        text-decoration: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+
+        &:hover {
+          color: $primary;
+
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+      }
+
+      
+    }
+  }
+
+  #contact {
+    justify-content: center;
+
+    .btn {
+      margin-right: 50px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    .social-icons {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 50px 0 0 0;
+
+     a {
+        svg {
+          width: 30px;
+
+          path {
+            fill: #fff;
+          }
+        }
+
+        &:hover {
+          svg {
+            path {
+              fill: #e91d63;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 30px;
+  
+  p {
+    @include pixel();
+  }
+}

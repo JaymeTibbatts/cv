@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'Pixel Operator';
+  src: url('../fonts/PixelOperator.woff2') format('woff2'),
+      url('../fonts/PixelOperator.woff') format('woff'),
+      url('../fonts/PixelOperator.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+p, body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}

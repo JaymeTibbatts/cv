@@ -1,0 +1,29 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaymeTibbatts/cv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaymeTibbatts/cv/issues"
+  },
+  "homepage": "https://github.com/JaymeTibbatts/cv#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/svg-inject.min.js": "/js/svg-inject.min.js",
+    "/css/fonts.css": "/css/fonts.css",
+    "/css/reset.css": "/css/reset.css",
+    "/css/app.css": "/css/app.css",
+    "/fonts/PixelOperator.ttf": "/fonts/PixelOperator.ttf",
+    "/fonts/PixelOperator.woff": "/fonts/PixelOperator.woff",
+    "/fonts/PixelOperator.woff2": "/fonts/PixelOperator.woff2",
+    "/images/brackets-logo.svg": "/images/brackets-logo.svg",
+    "/images/linkedin-icon.blade.php": "/images/linkedin-icon.blade.php",
+    "/images/linkedin-icon.svg": "/images/linkedin-icon.svg",
+    "/images/pixel-pattern-gradient.svg": "/images/pixel-pattern-gradient.svg",
+    "/images/arrow-go.svg": "/images/arrow-go.svg"
+}
