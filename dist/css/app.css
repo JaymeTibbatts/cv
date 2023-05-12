@@ -10,7 +10,7 @@ body {
   background-color: #190319;
 }
 
-.container, .container__1400, .container__full {
+.container, .container__1400, .container__1200, .container__full {
   padding: 30px;
   display: flex;
   flex-flow: row wrap;
@@ -19,6 +19,11 @@ body {
 .container__full {
   max-width: 100%;
   width: 100%;
+}
+.container__1200 {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 .container__1400 {
   max-width: 1400px;
@@ -92,6 +97,8 @@ main #top {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 75px;
+  margin-top: 50px;
 }
 main #top h1, main #top h2 {
   width: 100%;
@@ -119,11 +126,39 @@ main #top h1::after {
 }
 main #top h2 {
   color: #e91d63;
-  font-size: 36px;
+  font-size: 36px !important;
   font-family: "Pixel Operator", monospace;
   letter-spacing: 1px;
   font-size: 18px;
   font-weight: normal;
+}
+main .about__left, main .about__right {
+  width: 50%;
+  position: relative;
+}
+main .about__left p, main .about__right p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+main .about__left p:last-child, main .about__right p:last-child {
+  margin-bottom: 0;
+}
+main .about__left p a, main .about__right p a {
+  color: #e91d63;
+}
+main .about__left img, main .about__right img {
+  position: relative;
+}
+main .about__left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("/dist/images/pixel-pattern-gradient.svg");
+  background-repeat: repeat-y;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
 }
 main .projects {
   gap: 50px;
