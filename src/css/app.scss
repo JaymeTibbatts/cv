@@ -232,7 +232,6 @@ main {
       img {
         border-radius: 20px;
         border: 2px solid $primary;
-        height: 260px;
         width: 100%;
         margin-bottom: 30px;
       }
@@ -252,8 +251,10 @@ main {
           }
         }
 
-        &:hover {
-          color: $primary;
+        &:hover {      
+          .project-title, .project-icon {
+            color: $primary;
+          }
 
           svg {
             path {
@@ -263,6 +264,18 @@ main {
         }
       }
 
+      .project-title {
+        transition: all 0.25s ease;
+      }
+
+      .project-desc {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: 10px;
+        opacity: 0.6;
+      }
       
     }
   }
