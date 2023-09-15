@@ -27,5 +27,6 @@ mix.js('src/js/app.js', 'js')
 
 mix.copyDirectory('src/fonts', 'dist/fonts');
 mix.copyDirectory('src/images', 'dist/images');
+mix.copyDirectory('src/images/favicon', 'dist/images/favicon');
 
    
