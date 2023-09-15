@@ -204,20 +204,8 @@ main {
 
       img {
         position: relative;
-      }
-    }
-
-    &__left {
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-image: url('/dist/images/pixel-pattern-gradient.svg');
-        background-repeat: repeat-y;
-        background-size: 50%;
-        width: 100%;
-        height: 100%;
+        border-radius: 20px;
+        border: 2px solid $primary;
       }
     }
   }
