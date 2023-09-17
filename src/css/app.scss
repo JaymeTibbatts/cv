@@ -24,6 +24,16 @@ $bp-1600: 1600px;
   transition: all 0.2s ease;
 }
 
+@mixin mobilefirst($res) {
+	@if (unitless($res)) {
+		$res: #{$res}px;
+	}
+
+	@media screen and (min-width: $res) {
+		@content;
+	}
+}
+
 svg {
   path {
     @include transition();
@@ -41,8 +51,12 @@ body {
 .container {
   padding: 30px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: center;
+
+  @include mobilefirst($bp-768) {
+    flex-flow: row wrap;
+  }
 
   &__full {
     @extend .container;
@@ -108,14 +122,22 @@ body {
   &__nav-list {
     justify-content: space-between;
     align-items: center;
-    display: flex;
+    display: none;
     flex-flow: row wrap;
     list-style-type: none;
     padding: 0;
+
+    @include mobilefirst($bp-768) {
+      display: flex;
+      gap: 20px;
+    }
+
+    @include mobilefirst($bp-1024) {
+      gap: 40px;
+    }
   }
 
   &__nav-item {
-    padding-right: 40px;
     @include pixel();
     text-transform: uppercase;
   
@@ -145,8 +167,13 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 75px;
-    margin-top: 50px;
+    margin-bottom: 125px;
+    margin-top: 100px;
+
+    @include mobilefirst($bp-1200) {
+      margin-bottom: 75px;
+      margin-top: 50px;
+    }
 
     h1, h2 {
       width: 100%;
@@ -181,13 +208,27 @@ main {
       color: $primary;
       font-size: 36px !important;
       @include pixel();
+      width: 75%;
+
+      @include mobilefirst($bp-1200) {
+        width: 100%;
+      }
     }
   }
 
   .about {
+    justify-content: center;
+
+    @include mobilefirst($bp-1024) {
+      justify-content: left;
+    }
+
     &__left, &__right {
-      width: 50%;
       position: relative;
+
+      @include mobilefirst($bp-1024) {
+        width: 50%;
+      }
 
       p {
         color: #fff;
@@ -206,6 +247,14 @@ main {
         position: relative;
         border-radius: 20px;
         border: 2px solid $primary;
+        margin-bottom: 50px;
+        width: 300px;
+
+        @include mobilefirst($bp-1024) {
+          margin-bottom: 0;
+          width: 350px;
+        }
+
       }
     }
   }
@@ -215,7 +264,14 @@ main {
     margin-bottom: 100px;
 
     &__item {
-      width: calc(33% - 30px);
+
+      @include mobilefirst($bp-768) {
+        width: calc(50% - 30px);
+      }
+
+      @include mobilefirst($bp-1200) {
+        width: calc(33% - 30px);
+      }
 
       img {
         border-radius: 20px;
@@ -270,10 +326,10 @@ main {
 
   #contact {
     justify-content: center;
+    gap: 25px;
 
     .btn {
-      margin-right: 50px;
-
+    
       &:last-of-type {
         margin-right: 0;
       }
